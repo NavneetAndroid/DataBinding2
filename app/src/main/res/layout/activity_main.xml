@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/purple_200">
+   <data>
+       <variable
+           name="user"
+           type="com.example.databindingpractice.User" />
+   </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:textSize="20dp"
+        tools:context="com.example.databindingpractice.MainActivity"
+        >
+
+        <TextView
+            android:id="@+id/user_name_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:text="@{user.name}"
+            tools:text="Name"
+            />
+
+        <TextView
+            android:id="@+id/user_age_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@{Integer.toString(user.age)}"
+            tools:text="XX"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/user_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@{Long.toString(user.mobileNumber)}"
+            tools:text="XX"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+</layout>
